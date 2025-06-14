@@ -70,3 +70,162 @@ li.selected {
 .hidden {
   display: none;
 }
+/* Footer styles */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  background-color: #1a1a1a;
+  color: #aaaaaa;
+  font-size: 14px;
+  border-top: 1px solid #333333;
+}
+
+.footer a {
+  color: #9e66ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #6200ea;
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet and small desktop styles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 500px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 40%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  li {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 60%;
+    padding: 14px;
+    margin: 8px;
+    font-size: 1rem;
+  }
+
+  li {
+    padding: 15px;
+    margin: 8px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  #question-text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  #score {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .footer {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 320px) {
+  .container {
+    width: 98%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    width: 80%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  li {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large desktop styles */
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 450px;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    width: 25%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  li {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+}
