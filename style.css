@@ -64,11 +64,7 @@ li:hover {
 }
 
 li.selected {
-  background-color: #28a745;
-}
-
-li.selected:hover {
-  background-color: #28a745;
+  background-color: lab(70% 5 85%);
 }
 
 .hidden {

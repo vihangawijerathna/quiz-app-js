@@ -33,12 +33,35 @@ document.addEventListener("DOMContentLoaded", () => {
   startBtn.addEventListener("click", startQuiz);
 
   nextBtn.addEventListener("click", () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      showQuestion();
+    const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+    const selectedChoice = choicesList.querySelector("li.selected");
+
+    // Find the correct answer element
+    const allChoices = choicesList.querySelectorAll("li");
+    let correctChoiceElement = null;
+
+    allChoices.forEach((li) => {
+      if (li.textContent === correctAnswer) {
+        correctChoiceElement = li;
+      }
+    });
+
+    if (selectedChoice && selectedChoice.textContent === correctAnswer) {
+      // Correct answer - make it green
+      selectedChoice.style.backgroundColor = "green";
     } else {
-      showResult();
+      // Wrong answer - make selected red and correct green
+      if (selectedChoice) {
+        selectedChoice.style.backgroundColor = "red";
+      }
+      if (correctChoiceElement) {
+        correctChoiceElement.style.backgroundColor = "green";
+      }
     }
+
+    setTimeout(() => {
+      loadNextQuestion();
+    }, 1000);
   });
 
   restartBtn.addEventListener("click", () => {
@@ -87,5 +110,14 @@ document.addEventListener("DOMContentLoaded", () => {
     questionContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
     scoreDisplay.textContent = `${score} out of ${questions.length}`;
+  }
+
+  function loadNextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
   }
 });
