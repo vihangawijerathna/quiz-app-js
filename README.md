@@ -2,6 +2,10 @@
 
 A simple, interactive quiz application built with vanilla JavaScript, HTML, and CSS. Test your knowledge with multiple-choice questions in a clean, responsive interface.
 
+## Live Demo
+
+🚀 **[Try the Quiz App Live](https://vihangawijerathna.github.io/quiz-app-js/)**
+
 ## Screenshot
 
 ![Quiz App Screenshot](assets/screenshot.png)
